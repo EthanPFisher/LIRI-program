@@ -15,7 +15,8 @@ var term = process.argv.splice(3).join(" ")
 // console.log("term: '" + term + "'")
 console.log("\n")
 
-cmdSwitch()
+cmdSwitch() // initial run
+
 function cmdSwitch() {
     switch (command) {
         case "concert-this":
@@ -77,7 +78,6 @@ function spotifySearch() {
             var flag = false
             var i = 0
             var res
-
             // finds matching song name or uses first result if match not found
             while (!flag) {
                 if (i < data.tracks.items.length) {
